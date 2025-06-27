@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "a3ad9651-28ea-477f-ad80-8c413d18e0c1",
+		"name": "Laravel Address Platform",
+		"description": "Plataforma para cadastro e listagem de endereços de usuários, integrada à API ViaCEP, desenvolvida com Laravel 11, arquitetura em camadas e Docker.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45743130"
+	},
+	"item": [
+		{
+			"name": "📋 Listar usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/users",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "🧾 Detalhar usuário",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "➕ Criar usuário",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -74,6 +74,14 @@ php artisan test --env=testing
 
 ---
 
+## 🔗 Testes via Postman
+
+- Acesse a pasta do projeto e localize o arquivo:
+-- **Laravel Address Platform.postman_collection.json** 
+-- No Postman, clique em “Import”, selecione o arquivo da coleção e importe.
+
+---
+
 ## 💻 Interface Web
 
 - **Listagem de Usuários:** [http://localhost:8000/](http://localhost:8000/)
