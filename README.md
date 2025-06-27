@@ -40,7 +40,8 @@ docker-compose up -d
 Execute as migrations e seeders para popular dados de teste:
 
 ```bash
-docker-compose exec app php artisan migrate --seed
+docker-compose exec laravel-app 
+php artisan migrate --seed
 ```
 
 - Credenciais padrão:
