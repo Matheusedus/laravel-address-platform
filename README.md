@@ -54,7 +54,9 @@ docker-compose exec app php artisan migrate --seed
 ## 🧪 Rodando os Testes
 
 ```bash
-docker-compose exec app php artisan test
+docker-compose exec -it laravel-app bash 
+php artisan migrate --env=testing
+php artisan test --env=testing
 ```
 
 - Inclui testes unitários de validação e teste de integração da API de usuários.
@@ -86,14 +88,6 @@ docker-compose exec app php artisan test
 - `app/Http/Controllers/Api` — Controllers da API
 - `app/Http/Controllers` — Controllers das views Blade
 - `resources/views` — Frontend Blade
-
----
-
-## 🚀 Deploy 
-
-(Aguardando deploy)
-
----
 
 ## 📄 Observações
 

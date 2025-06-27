@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class StoreUserRequestTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * Teste de validação de email unico
      */

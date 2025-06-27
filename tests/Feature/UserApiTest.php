@@ -8,6 +8,7 @@ use Tests\TestCase;
 
 class UserApiTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * Teste de cadastro de usuário via api.
      */
