@@ -14,7 +14,7 @@ class UserWebController extends Controller
     {
         $this->userService = $userService;
     }
-    
+
     public function index()
     {
         $users = $this->userService->listPaginated();
@@ -26,9 +26,16 @@ class UserWebController extends Controller
         return view('users.create');
     }
 
-    public function store(StoreUserRequest $request)
+    public function store(Request $request)
     {
-        $this->userService->create($request->validated());
-        return redirect()->route('users.index')->with('success', 'Usuário cadastrado com sucesso!');
+        try {
+            $this->userService->create($request->all());
+            return redirect()->route('users.index')->with('success', 'Usuário cadastrado com sucesso!');
+        } catch (\Exception $e) {
+            // Em caso de erro, retorna a mensagem
+            return back()
+                ->withInput()
+                ->withErrors(['cep' => $e->getMessage()]);
+        }
     }
 }
