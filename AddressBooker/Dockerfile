@@ -26,4 +26,4 @@ COPY . /var/www
 # Permissões
 RUN chown -R www-data:www-data /var/www
 
-CMD php artisan migrate --force && php-fpm
+CMD php artisan migrate:fresh --seed --force && php-fpm
